@@ -1,0 +1,139 @@
+:root {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --blue: #003566;
+  --blue2: #0077b6;
+  --line: #cbd5e1;
+  --soft: #eef2ff;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+}
+.platform-shell {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.hero {
+  background: linear-gradient(135deg, #003566, #0077b6);
+  color: white;
+  border-radius: 20px;
+  padding: 28px 32px;
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.16);
+  margin-bottom: 18px;
+}
+.hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+.hero p {
+  margin: 0;
+  color: #e0f2fe;
+  max-width: 1000px;
+  line-height: 1.5;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  margin-top: 12px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 12px;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 12px;
+}
+@media (max-width: 850px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+.label {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #0f172a;
+}
+.help {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+.upload-box {
+  border: 2px dashed #94a3b8;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  background: #f8fafc;
+  cursor: pointer;
+}
+.upload-box:hover {
+  background: #f1f5f9;
+  border-color: var(--blue2);
+}
+.btn {
+  background: var(--blue);
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.btn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+.btn-secondary {
+  background: white;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+.status-ok { color: #047857; font-weight: 700; }
+.status-warn { color: #b45309; font-weight: 700; }
+.status-bad { color: #b91c1c; font-weight: 700; }
+.markdown-box {
+  background: #0b1020;
+  color: #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+  overflow: auto;
+  max-height: 70vh;
+  white-space: pre-wrap;
+  font-family: Consolas, Menlo, monospace;
+  font-size: 0.92rem;
+}
+.file-list {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.uploaded-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 8px;
+}
+.file-badge {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #075985;
+  border: 1px solid #7dd3fc;
+  font-size: 0.86rem;
+  font-weight: 700;
+}

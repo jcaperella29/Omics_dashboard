@@ -1,0 +1,6 @@
+dash>=2.17
+pandas>=2.0
+plotly>=5.18
+requests>=2.31
+kaleido>=0.2.1
+python-dotenv>=1.0
